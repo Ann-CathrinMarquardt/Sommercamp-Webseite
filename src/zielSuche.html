@@ -15,19 +15,24 @@
         function suche(){
         let strandRadioButton = document.getElementById("strand");
         let bergeRadioButton = document.getElementById("berge");
+
         let warmRadioButton = document.getElementById("warm");
         let kaltRadioButton = document.getElementById("kalt");
+
         let deutschCheckBox = document.getElementById("deutsch");
         let englischCheckBox = document.getElementById("englisch");
         let französischCheckBox = document.getElementById("französisch");
         let portugiesischCheckBox = document.getElementById("portugiesisch");
         let hindiCheckBox = document.getElementById("hindi");
+
         let scharfCheckBox = document.getElementById("scharf");
         let würzigCheckBox = document.getElementById("würzig");
-        let mildCheckBox = document.getElementById("würzig");
+        let mildCheckBox = document.getElementById("mild");
+
         let sehrsicherRadioButton = document.getElementById("sehrsicher");
         let sicherRadioButton = document.getElementById("sicher");
         let wenigersicherRadioButton = document.getElementById("wenigersicher");
+
         let garnichtsicherRadioButton = document.getElementById("garnichtsicher");
         let sehrstabilRadioButton = document.getElementById("sehrstabil");
         let stabilRadioButton = document.getElementById("stabil");
@@ -37,46 +42,45 @@
         let australien= true;
         let brasilien= true;
         let indien= true;
-        let Reiseziel;
+        let Reiseziel = "";
 
-      /*  if (strandRadioButton.checked) {
+        
+        if (strandRadioButton.checked) {
           
-        } else if (bergeRadioButton.checked) {
-          
+        } 
+        else if (bergeRadioButton.checked) {
         }
         if (warmRadioButton.checked){
-        
-        } */
-        if (kaltRadioButton.checked){
-          set (afrika) = false;
-          set (australien) = false;
-          set (brasilien)= false;
-          set (indien) = false;
+        } 
+        if (kaltRadioButton.checked ){
+          afrika = false;
+          australien = false;
+          brasilien= false;
+          indien = false;
         }
 
-        if (deutschCheckBox.checked){
-          set (afrika) = false;
-          set (australien) = false;
-          set (brasilien)= false;
-          set (indien) = false;
+        if (deutschCheckBox.checked ){
+          afrika = false;
+          australien = false;
+          brasilien= false;
+          indien = false;
         }
-     /*   else if (englischCheckBox.checked){
-          
-        } */
-        else if (französischCheckBox.checked){
-          set (australien) = false;
-          set (brasilien)= false;
-          set (indien) = false;
+        else if (englischCheckBox.checked){
+        } 
+        else if (französischCheckBox.checked ){
+          australien = false;
+          brasilien= false;
+          indien = false;
         }
         else if (portugiesischCheckBox.checked){
-          set (afrika) = false;
-          set (australien) = false;
-          set (indien) = false;
+          afrika = false;
+          australien = false;
+          indien = false;
         }
         else if (hindiCheckBox.checked){
-          set (afrika) = false;
-          set (australien) = false;
-          set (brasilien) = false;
+          afrika = false;
+          australien = false;
+          brasilien = false;
         }
         else if (scharfCheckBox.checked){
           
@@ -85,52 +89,51 @@
          
         }
         else if (mildCheckBox.checked){
-          set (australien) = false;
+          australien = false;
         } 
         else if  (sehrsicherRadioButton.checked){
-          set (afrika) = false;
-          set (indien) = false;
-          set (brasilien) = false;
+          afrika = false;
+          indien = false;
+          brasilien = false;
         }
         else if  (sicherRadioButton.checked){
-          set (indien) = false;
-          set (brasilien) = false;
+          indien = false;
+          brasilien = false;
         }
         else if  (wenigersicherRadioButton.checked){
-            set (brasilien) = false;
+            brasilien= false;
         }
         else if  (garnichtsicherRadioButton.checked){
           
         }
         else if  (sehrstabilRadioButton.checked){
-            set (afrika) = false;
-        }
+            brasilien = false;
+            indien = false;}
         else if  (stabilRadioButton.checked){
             
-            set (brasilien) = false;
+            afrika= false;
         }
         else if  (wenigerstabilRadioButton.checked){
-            set (brasilien) = false;
-            set (indien) = false;
+            
         }
        
         if (afrika==true){
-        set (Reiseziel) = Reiseziel + " Afrika ";
+        Reiseziel = Reiseziel + " Afrika ";
         }
         if (australien==true){
-        set (Reiseziel) = Reiseziel + " Australien ";
+        Reiseziel = Reiseziel + " Australien ";
         }
         if (brasilien==true){
-        set (Reiseziel) = Reiseziel + " Brasilien ";
+        Reiseziel = Reiseziel + " Brasilien ";
         }
         if (indien==true){
-        set (Reiseziel) = Reiseziel + " Indien ";
+        Reiseziel = Reiseziel + " Indien ";
         }
-        else if(indien== false && afrika==false && australien==false && brasilien==false){
-            set (Reiseziel) = " konnte leider noch nicht gefunden werden. Wir arbeiten daran die Optionen auszubauen. ";
+        if(indien== false && afrika==false && australien==false && brasilien==false){
+            Reiseziel = " konnte leider noch nicht gefunden werden. Wir arbeiten daran die Optionen auszubauen. ";
         }
-            alert("Dein passendes Reiseziel ist" + Reiseziel);
-        }
+            alert("Dein passendes Reiseziel ist:" + Reiseziel);
+    }
     </script> 
 
     <div id="wrapper">
@@ -159,6 +162,7 @@
     
         <div class="content-small2">
             <input type="radio" name="Lage" id="strand"/>Strand
+
             </br> 
             <input type="radio" name="Lage" id="berge"/>Berge
         </div>
